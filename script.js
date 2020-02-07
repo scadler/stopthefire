@@ -1,10 +1,4 @@
 
-//modal
-//$("#modal").hide();
-
-$(".forestTile").click(function() {
-    $("#modal").show();
-});
 
 var inprogress = false
 $("#gameStart").click(function(){
@@ -94,5 +88,3 @@ setInterval(function(){
     }
 }
 }, 7500)
-
-//
