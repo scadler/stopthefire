@@ -183,7 +183,7 @@ function getData(){
     answer: "humans",
     options: ["humans","animals","weather","insects"]
   },
-   { question: "How do wildfires affect wildlife?",
+   { question: "How hot are wildfires?",
     answer: "1,472F",
     options: ["1,472F","1,682F","1,936F","2,125F"]
 },
