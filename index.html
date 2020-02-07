@@ -1,28 +1,27 @@
 <html> 
     <head> 
         <link type="text/css" rel="stylesheet" href="style.css" />
-        <title>Bootstrap Example</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
+    
     <div id="forest">
         <!--modal-->
             <div id="modal">
-                <div id="question">
+                <div id="questions">
                     <h2 class="question"> Question </h2>
                 </div> 
                 <div id="answers-container">
                     <div class="answers">
-                        <p>  </p>
-                        <p>  </p>
+                        <button class="ans" id="answers0"></button>
+                        <button class="ans" id="answers1"></button>
                     </div>
                     <div class="answers">
-                        <p> </p>
-                        <p> </p>
+                        <button class="ans" id="answers2"></button>
+                        <button class="ans" id="answers3"></button>
+                    </div>
+
+                    <div>
+                        <button class="quit"> quit </button>
                     </div>
                 </div>
             </div>
@@ -111,10 +110,12 @@
             <button id="gameStart">Start game</button>
         </div>
     </div>
-    
     </div>
-        
-        
+    <div id="model1"> Can't save the forest in game? <a href="https://northlab.faculty.ucdavis.edu/wp-content/uploads/sites/195/2016/02/Forest-Fires-Answers-to-12-Common-Questions-2.pdf"> Do it in real life!</a> </div>
+   
+    <div id="model2"><a href="https://www.doi.gov/blog/7-burning-questions-wildfires-public-lands">More Info</a> </div>
+    
+    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="script.js"></script>
     </body>
