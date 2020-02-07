@@ -1,30 +1,44 @@
 .forestTile {
-    width:12.5vw;
-    height:12.5vw;
-    display:flex;
-    /* flex-flow: row wrap; */
+    width:12.5vh;
+    height:12.5vh;
+    display: flex;
     float: left;
-    border: 1px solid black;
-    background-color: #BDBDBD;
+    background-color: rgb(64, 155, 37);
+    background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+}
+#lake{
+    background-image: url("https://imgur.com/A3PPHLY.jpg");
 }
 .filler{
-    width:12.5vw;
-    height:12.5vw;
+    width:12.5vh;
+    height:12.5vh;
     display:flex;
     float: left;
 }
 #board{
-    width:100vw;
-    height:100vw;
-}
-.row{
-    height:12.5vw;
-}
-img{
-    width:12.5vw;
-    height:12.5vw;
+    width:100vh;
+    height:100vh;
 }
 
-#mdoal{
-    border-style:solid;
+.row{
+    height:12.5vh;
+}
+.tree{
+    position: absolute;
+    width:12.5vh;
+    height:12.5vh;
+    z-index: 0;
+}
+.fire{
+    position: absolute;
+    width:12.5vh;
+    height:12.5vh;
+    z-index: 10;
+    display: flex;
+}
+
+
+#forest{
+    background-image: url("assets/forest.jpeg");
+    background-norepeat
 }

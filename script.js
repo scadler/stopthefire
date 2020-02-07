@@ -1,16 +1,21 @@
 
+//modal
+//$("#modal").hide();
 
-  $("#myBtn").click(function(){
-    $("#myModal").modal();
-  });
+$(".forestTile").click(function() {
+    $("#modal").show();
+});
+
+var inprogress = false
 $("#gameStart").click(function(){
     clearBoard();
-    
+    inprogress = true;
 });
 
 function startFires() {
     var i = 0;
     while (i < 5) {
+        var fireType = Math.floor(Math.random() * 2);
         var xCoor = (Math.floor((Math.random() * 4)) * 10);
         var yCoor = (Math.floor((Math.random() * 9)));
         var xyCoor = Number(xCoor + yCoor);
@@ -22,7 +27,12 @@ function startFires() {
             i = i -1;
         }
         else {
-            $("#s" + xyCoor).append(`<p class="fire" id=${xyCoor}>fire</p>`);
+            if(fireType === 0){
+                $("#s" + xyCoor).append(`<img class="fire" id=${xyCoor} src="https://imgur.com/PLr4070.jpg">`);
+            }
+            else if(fireType === 1){
+                $("#s" + xyCoor).append(`<img class="fire" id=${xyCoor} src="https://imgur.com/ZFYKZ89.jpg">`);
+            }
         }
         i = i + 1;
     }
@@ -33,8 +43,7 @@ function clearBoard(){
         i = i+1;
         $("#s" + i).empty();
     }
-    populateBoard()
-    
+    populateBoard();
 }
 function populateBoard(){
      var a = 0;
@@ -43,17 +52,47 @@ function populateBoard(){
         var ran = Math.floor(Math.random()*4)
         if( ran === 1){
             //put tree images here and below
-            $("#s"+a).append(`<img class="img" src=https://i.imgur.com/a8NkZqg.jpg">`);
+            $("#s"+a).append(`<img class="tree" src=https://i.imgur.com/a8NkZqg.jpg">`);
         }
         else if( ran === 2){
-            $("#s"+a).append(`<img class="img" src="https://i.imgur.com/kQCp4an.jpg">`);
+            $("#s"+a).append(`<img class="tree" src="https://i.imgur.com/kQCp4an.jpg">`);
         }
         else if( ran === 3){
-            
+            $("#s"+a).append(`<img class="tree" src="https://imgur.com/DAN5Pm5.jpg">`);
         }
         else{
+            $("#s"+a).append(`<img class="tree" src="https://imgur.com/YpoTQFW.jpg">`);
 
         }
     }
     startFires();
 }
+
+setInterval(function(){
+    if(inprogress === true){
+    var b = 0;
+    while (b < 1) {
+        var newFireType = Math.floor(Math.random() * 2);
+        var x = (Math.floor((Math.random() * 4)) * 10);
+        var y = (Math.floor((Math.random() * 9)));
+        var xy = Number(x + y);
+        if ($("#s" + xy).contents().hasClass('fire') === true) {
+            b = b-1;
+        }
+        else if(xy > 46){
+            b = b-1;
+        }
+        else {
+            if(newFireType === 0){
+                $("#s" + xy).append(`<img class="fire" id=${xy} src="https://imgur.com/PLr4070.jpg">`);
+            }
+            else if(newFireType === 1){
+                $("#s" + xy).append(`<img class="fire" id=${xy} src="https://imgur.com/ZFYKZ89.jpg">`);
+            }
+        }
+        b = b+1;
+    }
+}
+}, 7500)
+
+//
