@@ -5,7 +5,7 @@ let data =
 },
 
   { question: "How do wildfires purposely start?",
-    answer: humans,
+    answer: "humans",
     options: ["humans","animals","weather","insects"]
   },
    { question: "How do wildfires affect wildlife?",
@@ -32,8 +32,8 @@ let data =
 },
 {
     question: "What causes wildfires naturally?",
-    answer: lightning,
-    options: [lightning,foggy,hail,nothing]
+    answer: "lightning",
+    options: ["lightning","foggy","hail","nothing"]
 
 },
 {
@@ -54,5 +54,15 @@ let data =
 
     
 ]
-console.log (data[0]["answer"]) 
+function randomNumbers() {
+    return Math.floor(Math.random()*(data.length-1);
+}
+console.log (randomNumbers())
+data[9]
+console.log (data[randomNumbers()])
 
+
+function randomQuestions() {
+    return data[randomNumbers()]
+}
+console.log (data[randomQuestions()])

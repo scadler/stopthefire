@@ -10,6 +10,23 @@
     </head>
     <body>
     <div id="forest">
+        <!--modal-->
+            <div id="modal">
+                <div id="question">
+                    <h2 class="question"> Question </h2>
+                </div> 
+                <div id="answers-container">
+                    <div class="answers">
+                        <p>  </p>
+                        <p>  </p>
+                    </div>
+                    <div class="answers">
+                        <p> </p>
+                        <p> </p>
+                    </div>
+                </div>
+            </div>
+            
      <div id="board">
      <div id="tiles">
             <div class="row">
@@ -88,28 +105,16 @@
                 <div class="forestTile" id="s46"></div>
             </div>
         </div>
-        <button id="gameStart">start game</button>
 
+        <div id="stats">
+            <p id="statsP">New Fires = <span id="fireCounter">0</span>/10</p>
+            <button id="gameStart">Start game</button>
+        </div>
     </div>
+    
     </div>
         
-        <!--modal-->
-        <div id="modal">
-            <div id="question">
-                <h1> Question </h1>
-            </div> 
-            <div id="answers-container">
-                <div class="answers">
-                    <p> hello </p>
-                    <p> hello </p>
-                </div>
-                <div class="answers">
-                    <p> hello </p>
-                    <p> hello </p>
-                </div>
-            </div>
-        </div>
-        </div>
+        
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="script.js"></script>
     </body>

@@ -1,9 +1,23 @@
+import Question from Question.js;
+$("#modal").hide();
+$("#statsP").hide();
 
+// $(".question").text(data[Math.floor(Math.random() * 2].question);
+$(".forestTile").click(function() {
+    var Id = $(this).attr('id');
+    if($("#"+Id).contents().hasClass('fire') === true){
+    $("#modal").show();
+    $("#forest").css("opacity", 0.5);
+    }
+});
 
 var inprogress = false
 $("#gameStart").click(function(){
+    $("#gameStart").hide();
+    $("#statsP").show();
     clearBoard();
     inprogress = true;
+    $("#fireCounter").text("0")
 });
 
 function startFires() {
@@ -83,8 +97,15 @@ setInterval(function(){
             else if(newFireType === 1){
                 $("#s" + xy).append(`<img class="fire" id=${xy} src="https://imgur.com/ZFYKZ89.jpg">`);
             }
+            var newFireCounter = Number($("#fireCounter").text()) + 1;
+            $("#fireCounter").text(newFireCounter)
+            if(newFireCounter >=11){
+                inprogress = false;
+                $("#gameStart").show();
+                $("#statsP").hide();
+            }
         }
         b = b+1;
     }
 }
-}, 7500)
+}, 500)
